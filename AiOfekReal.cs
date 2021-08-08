@@ -6,9 +6,8 @@ using UnityEngine;
 
 //Instruction:
 //1.put camera on the enemy and use it for raycast 
-//2.use vector3. Distance either if the fps is croathing couse the ray will not detect it
-//3.if the enemy detect the fps with his ray = his eyes 
-//4.the enemy will change his target to fps target instead the waypoints.
+//2.use vector3. Distance either if the fps is crouching because the ray will not detect it
+//3.if the enemy detect the fps with his ray = his eyes the enemy will change his target to fps target instead the waypoints.
 
 public class AiOfekReal : MonoBehaviour {         //THIS SCRIPT IS CONNECTED TO 'MoveTo' SCRIPT!
 
@@ -18,26 +17,26 @@ public class AiOfekReal : MonoBehaviour {         //THIS SCRIPT IS CONNECTED TO 
 	
 	public GameObject sound;
 	public Transform fps;
-	public float Run;
-	public float Walk;
+	public float Run;               //Speed enemy run
+	public float Walk;              //Speed enemy walk
 	public float countDownScan;     //The seconds the enemy will scan the area after he lose the vision with the player
 	public bool UsePatrol;
 	public Transform[] waypoints; 
 	public float MaxDisWaypoints;   //Distance from the waypoint
 	public bool WaitAtPoint;        // If the enemy want to wait for X seconds every point
-	public float timeWaiting;
+	public float timeWaiting;       // Amount the enemy will wait in seconds
 	public bool Idle;
 	public float NumCountingScan; // ITS PUBLIC JUST FOR THE SURVIVAL MODE! THE  DIFFICLTY SCRIPT NEED TO DETECT IT
 	public int NumPoints = 0;
 
-	private UnityEngine.AI.NavMeshAgent m_navComponent;
 	private bool m_startCount;
 	private bool m_foward;
 	private bool m_reverse;
-    private float m_walkSave;
+        private float m_walkSave;
 	private GameObject m_hitobject;
 	private bool m_InTheSight;
 	private bool m_lost;
+	private UnityEngine.AI.NavMeshAgent m_navComponent;
 
 
 	// Use this for initialization
