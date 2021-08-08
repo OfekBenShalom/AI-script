@@ -15,7 +15,7 @@ public class AiOfekReal : MonoBehaviour {         //THIS SCRIPT IS CONNECTED TO 
 	public float RangeOfEyes;       //The minimum vision of the enemy
 	public float MaxDistanceEyes;  // The vision distance of the enemy
 	
-	public GameObject sound;
+	public GameObject sound;       //Sound of the enemy when he chase you
 	public Transform fps;
 	public float Run;               //Speed enemy run
 	public float Walk;              //Speed enemy walk
