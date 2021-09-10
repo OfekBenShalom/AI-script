@@ -48,7 +48,9 @@ public class AiOfekReal : MonoBehaviour {         //THIS SCRIPT IS CONNECTED TO 
 	}
 	
 	// Update is called once per frame
-	void Update () {  cam.LookAt (fps);
+	void Update () {
+                cam.LookAt (fps);
+
 		if (m_lost) {
 			m_navComponent.speed = Walk;
 		}
@@ -65,7 +67,7 @@ public class AiOfekReal : MonoBehaviour {         //THIS SCRIPT IS CONNECTED TO 
 			m_lost = true;              //THE PLAYER RUN AWAY...
 			m_startCount = false;
 			countDownScan = NumCountingScan;
-            sound.GetComponent<AudioSource>().enabled = false;
+                        sound.GetComponent<AudioSource>().enabled = false;
 			GetComponent<MoveTo> ().target = null; //
 		}
 
